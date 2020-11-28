@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Chat events</name>
+    <events>
+        <variable comment="Name of the game on the signalling server." constant="1" name="GAME_NAME" sid="4713255663715721" static="0" type="text">scirra-chatexample</variable>
+        <variable comment="Name of the instance on the signalling server." constant="1" name="INSTANCE_NAME" sid="2110590493564844" static="0" type="text">default</variable>
+        <variable comment="Name of the room to join on the signalling server." constant="1" name="ROOM_NAME" sid="3459440549954199" static="0" type="text">main</variable>
+        <event-group description="A function to easily add a log message to the chat log textarea." sid="426277591762612" title="Chat log">
+            <sub-events>
+                <event-block sid="7056081984259646">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2696438992386966" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8833575741447164" type="ChatLog">
+                            <param id="0" name="Text">Self.Text &amp; newline &amp; Function.Param(0)</param>
+                        </action>
+                        <action id="9" name="Scroll to bottom" sid="1553927161211108" type="ChatLog" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Manages connecting to the signalling server and joining the room." sid="3589093994402016" title="Signalling">
+            <sub-events>
+                <event-block sid="6969574974861222">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5921545419714133" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6997606594448369" type="ChatLog">
+                            <param id="0" name="Text">&quot;Connecting..&quot;</param>
+                        </action>
+                        <action id="1" name="Connect" sid="5743345024337857" type="Multiplayer">
+                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4999926102978483">
+                    <conditions>
+                        <condition id="2" name="On connected" sid="7083878366871413" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5219602935709614" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Connected, logging in...&quot;</param>
+                        </action>
+                        <action id="4" name="Log in" sid="8593309100331951" type="Multiplayer">
+                            <param id="0" name="Alias">MyUsername</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3683751236422516">
+                    <conditions>
+                        <condition id="4" name="On logged in" sid="5973141943761528" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8876706050785376" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Logged in as &apos;&quot; &amp; Multiplayer.MyAlias &amp; &quot;&apos;, joining room...&quot;</param>
+                        </action>
+                        <action id="5" name="Join room" sid="6577771807422291" type="Multiplayer">
+                            <param id="0" name="Game">GAME_NAME</param>
+                            <param id="1" name="Instance">INSTANCE_NAME</param>
+                            <param id="2" name="Room">ROOM_NAME</param>
+                            <param id="3" name="Max peers">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4360973053971621">
+                    <conditions>
+                        <condition id="5" name="On joined room" sid="4724370751258157" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set read-only" sid="192445587260353" type="ChatTextBox">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="6" name="Set focused" sid="4688975482978636" type="ChatTextBox" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5413253118826669">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="5856377662699346" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="2921716968191661" type="System">
+                                    <param id="0" name="Group name">&quot;Host&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4089872761584665" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined the chat room as the host&quot;</param>
+                                </action>
+                                <action id="7" name="Add item" sid="1314260363989239" type="PeerList">
+                                    <param id="0" name="Text">&quot;🌐&quot; &amp; Multiplayer.MyAlias &amp; &quot; (host)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2299233264770383">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6172107259838324" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="6960390072013931" type="System">
+                                    <param id="0" name="Group name">&quot;Peer&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7643103168420247" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Joined the chat room as a peer&quot;</param>
+                                </action>
+                                <action id="7" name="Add item" sid="9195129815194822" type="PeerList">
+                                    <param id="0" name="Text">&quot;🌐&quot; &amp;  Multiplayer.MyAlias</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9837295563544924">
+                    <conditions>
+                        <condition id="6" name="On left room" sid="7362884614318793" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9854906608987948" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Left the chat room&quot;</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="8533611564876299" type="ChatTextBox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="11" name="Clear" sid="5705254172582482" type="PeerList" />
+                    </actions>
+                </event-block>
+                <event-block sid="4404376945898931">
+                    <conditions>
+                        <condition id="3" name="On disconnected" sid="5122722919059574" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9312743248825206" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Disconnected from signalling server&quot;</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="3991046870678704" type="ChatTextBox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="11" name="Clear" sid="9989466700308646" type="PeerList" />
+                    </actions>
+                </event-block>
+                <event-block sid="7714958481447735">
+                    <conditions>
+                        <condition id="1" name="On error" sid="7146598030310385" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2653747687025666" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Signalling error: &quot; &amp; Multiplayer.ErrorMessage</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Manages sending chat messages and joining/leaving peers" sid="4715640273336146" title="Chat">
+            <sub-events>
+                <event-group description="Events that are common to both the host and peers." sid="5013846408573653" title="Common">
+                    <sub-events>
+                        <event-block sid="6226821541915848">
+                            <conditions>
+                                <condition id="11" name="On peer connected" sid="5876768870491098" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8132995532696301" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; joined&quot;</param>
+                                </action>
+                                <action id="7" name="Add item" sid="2622825365950787" type="PeerList">
+                                    <param id="0" name="Text">&quot;🌐&quot; &amp;  Multiplayer.PeerAlias</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3645742830477446">
+                            <conditions>
+                                <condition id="13" name="On peer disconnected" sid="2388523816790472" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6956334044883338" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; left&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="262424375448911">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="7065717110641537" type="System">
+                                            <param id="0" name="Count">PeerList.ItemCount</param>
+                                        </condition>
+                                        <condition id="5" name="Compare item text at" sid="3709328201846102" type="PeerList">
+                                            <param id="0" name="Index">loopindex</param>
+                                            <param id="1" name="Text to compare">&quot;🌐&quot; &amp;Multiplayer.PeerAlias</param>
+                                            <param id="2" name="Case sensitivity">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Remove" sid="8701303809122579" type="PeerList">
+                                            <param id="0" name="Index">loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7521014600623974">
+                            <conditions>
+                                <condition id="14" name="On kicked" sid="954328183678334" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="4767917385502376" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Kicked. (The admin of the room kicked you or closed the room)&quot;</param>
+                                </action>
+                                <action id="4" name="Set enabled" sid="3225724515838948" type="ChatTextBox">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="11" name="Clear" sid="4639346644295153" type="PeerList" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="Events specific to chat room peers (i.e. non-host users)." inactive="1" sid="4757423477898831" title="Peer">
+                    <sub-events>
+                        <event-block any="1" sid="6563839333510469">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7513737703851806" type="Keyboard">
+                                    <param id="0" name="Key">13</param>
+                                </condition>
+                                <condition id="6" name="On object clicked" sid="595991329517178" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Untitled10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2369854820513741">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Compare text" sid="1405230832798076" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                            <param id="1" name="Case">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7058825440861357" type="Function">
+                                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.MyAlias &amp; &quot;&gt; &quot; &amp; ChatTextBox.Text</param>
+                                        </action>
+                                        <action id="8" name="Send message" sid="1390783983483759" type="Multiplayer">
+                                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;chat&quot;</param>
+                                            <param id="2" name="Message">ChatTextBox.Text</param>
+                                            <param id="3" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="6174097170721546" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6851704369510052">
+                            <conditions>
+                                <condition id="15" name="On peer message" sid="1856487506398269" type="Multiplayer">
+                                    <param id="0" name="Tag">&quot;chat&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7139576501025558" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.FromAlias &amp; &quot;&gt; &quot; &amp; Multiplayer.Message</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="Events specific to the chat room host." inactive="1" sid="3344262605949882" title="Host">
+                    <sub-events>
+                        <event-block any="1" sid="4837197477274635">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="8056590381576561" type="Keyboard">
+                                    <param id="0" name="Key">13</param>
+                                </condition>
+                                <condition id="6" name="On object clicked" sid="812789857235251" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Untitled10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4324730215438826">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Compare text" sid="2864637623582438" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                            <param id="1" name="Case">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1711158553266147" type="Function">
+                                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.MyAlias &amp; &quot;&gt; &quot; &amp; ChatTextBox.Text</param>
+                                        </action>
+                                        <action id="9" name="Broadcast message" sid="1096695275025561" type="Multiplayer">
+                                            <param id="0" name="From ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;chat&quot;</param>
+                                            <param id="2" name="Message">ChatTextBox.Text</param>
+                                            <param id="3" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="8266229850771559" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7403461832285971">
+                            <conditions>
+                                <condition id="15" name="On peer message" sid="3232828019407507" type="Multiplayer">
+                                    <param id="0" name="Tag">&quot;chat&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6431557156720259" type="Function">
+                                    <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.FromAlias &amp; &quot;&gt; &quot; &amp; Multiplayer.Message</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="5623041490551399" type="Multiplayer">
+                                    <param id="0" name="From ID">Multiplayer.FromID</param>
+                                    <param id="1" name="Tag">&quot;chat&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.Message</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="664696902294723">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="975080589994513" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set CSS style" sid="155970092363228" type="ChatTextBox">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;1.1em&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="781490985668172" type="ChatTextBox">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;basicregular&quot;</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="406463930674535" type="PeerList">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;1.6em&quot;</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="225219571940888" type="PeerList">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;basicregular&quot;</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="914452651314998" type="PeerList">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;0px dashed red&quot;</param>
+                </action>
+                <action id="6" name="Set CSS style" sid="884444052895929" type="PeerList">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0, 0, 0, 0)&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="805078962816844" type="ChatLog">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;1.5em&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="449554648301513" type="ChatLog">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0, 0, 0, 0)&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="656355524534952" type="ChatLog">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;0px dashed red&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="782323337065781" type="ChatTextBox">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0, 0, 0, 0)&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="983326944447187" type="ChatTextBox">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;0px dashed red&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="155712220223214">
+            <conditions>
+                <condition id="2" name="On clicked" sid="597241105774218" type="ChatLog" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set unfocused" sid="413645004070524" type="ChatLog" />
+            </actions>
+        </event-block>
+        <event-block sid="461881562585540">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="963360230190171" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set focused" sid="702176573466663" type="ChatTextBox" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

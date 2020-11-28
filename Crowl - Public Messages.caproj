@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Crowl - Public Messages</name>
+    <description>Free alternative to private &amp; public chat rooms.</description>
+    <version>0.5.6 - Beta</version>
+    <author>Sb7 - Samuel Bushi</author>
+    <author-email>samuelbushi.info@gmail.com</author-email>
+    <author-website>http://crowl.ga</author-website>
+    <app-id>com.sb7.crowl</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Gunnar Steincke" id="Cookie" version="1">Cookie</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra (default) | Gregory Georges (v1.0) | PlayLive (v2.0)" id="TextBoxAddon" version="1.919999957">Text box addon</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1080</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Loading</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="LogIN">
+            <object-type name="BG" sid="456748380030725">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="191882572310490">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="888467588573771" speed="0">
+                        <frame duration="1" hotspotX="0.500309" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (11).png" />
+                        <frame duration="1" hotspotX="0.500309" hotspotY="0.536769" original-source="C:\Users\user\Downloads\Untitled (12).png" />
+                        <frame duration="1" hotspotX="0.500309" hotspotY="0.561478" original-source="C:\Users\user\Downloads\Untitled (14).png" />
+                        <frame duration="1" hotspotX="0.500309" hotspotY="0.564212" original-source="C:\Users\user\Downloads\Untitled (15).png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Untitled7" sid="291093569262225">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="625817114156873">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="834675455525516" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (6).jpg" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (10).jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Untitled6" sid="691335738729768">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="445472730360876">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="503079941642746" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (5).jpg" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (9).jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Untitled5" sid="306343599782790">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="626323524000547">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769623249138889" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (4).jpg" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.51" original-source="C:\Users\user\Downloads\Untitled (8).jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Untitled4" sid="177564939618352">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="143380398408549">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155562299481148" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (35).png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Untitled" sid="156342424581740">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="287282306440374">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="996247711033285" speed="5">
+                        <frame duration="1" hotspotX="0.501718" hotspotY="0.503226" original-source="C:\Users\user\Downloads\Untitled.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Untitled2" sid="643524518366475">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="367555696543375">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="599056786899594" speed="0">
+                        <frame duration="1" hotspotX="0.501002" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (1).jpg" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.496689" original-source="C:\Users\user\Downloads\Untitled (28).png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Managers">
+            <object-type name="Browser" sid="8731513663264036">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Keyboard" sid="8337804910901519">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Multiplayer" sid="2102346730747177">
+                <plugin id="Multiplayer" />
+            </object-type>
+            <object-type name="Function" sid="6713570013783801">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Mouse" sid="850544310591680">
+                <plugin id="Mouse" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Loading">
+            <object-type name="LoadingUrl" sid="896635296298476">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="300633603364647">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="17" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832948134667762" speed="7">
+                        <frame duration="1" hotspotX="0.521739" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4.png" />
+                        <frame duration="1" hotspotX="0.513514" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (1).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (2).png" />
+                        <frame duration="1" hotspotX="0.506849" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (3).png" />
+                        <frame duration="1" hotspotX="0.505618" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (4).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (5).png" />
+                        <frame duration="1" hotspotX="0.504348" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (6).png" />
+                        <frame duration="1" hotspotX="0.503876" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (7).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (8).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (9).png" />
+                        <frame duration="1" hotspotX="0.502793" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (10).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (11).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (12).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (13).png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (14).png" />
+                        <frame duration="1" hotspotX="0.501887" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (15).png" />
+                        <frame duration="1" hotspotX="0.501779" hotspotY="0.512821" original-source="C:\Users\user\Downloads\Untitled-4 (16).png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="NewLogIn">
+            <object-type name="owl" sid="968238679674587">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="618799048195991">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="711267816673869" speed="5">
+                        <frame duration="1" hotspotX="0.500921" hotspotY="0.500759" original-source="C:\Users\user\Desktop\New folder\owl (1).png">
+                            <collision-poly>
+                                <point x="0.0220994" y="0.0182094" />
+                                <point x="0.977901" y="0.0182094" />
+                                <point x="0.955801" y="0.499241" />
+                                <point x="0.876611" y="0.898331" />
+                                <point x="0.499079" y="0.951442" />
+                                <point x="0.121547" y="0.899848" />
+                                <point x="0.0441989" y="0.499241" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="ChatLog" sid="5408975575978266">
+            <plugin id="TextBox" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="541405841205592">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ChatTextBox" sid="3964265403639984">
+            <plugin id="TextBox" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="611896743123189">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="PeerList" sid="6280765575925442">
+            <plugin id="List" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="146546458011233">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="NBame" sid="350188690245137">
+            <plugin id="TextBoxAddon" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="567349833714243">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Text" sid="976341756678960">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="742008243557329">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Untitled8" sid="638786994987319">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="259627329949902">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="787740747743061" speed="5">
+                    <frame duration="1" hotspotX="0.501718" hotspotY="0.512195" original-source="C:\Users\user\Downloads\Untitled (17).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled3" sid="330720266693807">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="503721807930796">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="198993768725795" speed="5">
+                    <frame duration="1" hotspotX="0.501718" hotspotY="0.511111" original-source="C:\Users\user\Downloads\Untitled (55).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled9" sid="256462601178441">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="173032414978178">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="167116266725158" speed="5">
+                    <frame duration="1" hotspotX="0.50033" hotspotY="0.500569" original-source="C:\Users\user\Downloads\Untitled (21).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled11" sid="532036010552875">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="209591373447392">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648962878405886" speed="5">
+                    <frame duration="1" hotspotX="0.500971" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (23).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled10" sid="133970523432268">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="438922472803012">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665630945716101" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\user\Downloads\Untitled (50).png">
+                        <collision-poly>
+                            <point x="0.0103093" y="0.0266667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.989691" y="0.0266667" />
+                            <point x="0.989691" y="0.973333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0103093" y="0.973333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled12" sid="671583329472647">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="707037992326044">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769357857134775" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\user\Downloads\Untitled (51).png">
+                        <collision-poly>
+                            <point x="0.00190114" y="0.0266667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.998099" y="0.0266667" />
+                            <point x="0.998099" y="0.973333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00190114" y="0.973333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled13" sid="743503394008336">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="409038526625623">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509045260712502" speed="5">
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\user\Downloads\Untitled (53).png">
+                        <collision-poly>
+                            <point x="0.0133333" y="0.0133333" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.986667" y="0.0133333" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.986667" y="0.986667" />
+                            <point x="0.493333" y="1" />
+                            <point x="0.0133333" y="0.986667" />
+                            <point x="0" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled14" sid="827093785457289">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="151808397273919">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799388431720276" speed="5">
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\user\Downloads\Untitled (52).png">
+                        <collision-poly>
+                            <point x="0.0133333" y="0.0133333" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.986667" y="0.0133333" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.986667" y="0.986667" />
+                            <point x="0.493333" y="1" />
+                            <point x="0.0133333" y="0.986667" />
+                            <point x="0" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fade" sid="757876869469736">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="638904693878425">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Untitled15" sid="538882744401039">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969048678768652" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (31).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled17" sid="459554944241559">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="471430073453525">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878930208673096" speed="5">
+                    <frame duration="1" hotspotX="0.501235" hotspotY="0.5" original-source="C:\Users\user\Downloads\Untitled (43).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cookie" sid="524718987873871">
+            <plugin id="Cookie" />
+        </object-type>
+        <object-type name="Sprite" sid="992238642658455">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="988465970488944">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="185818001235954" speed="5">
+                    <frame duration="1" hotspotX="0.509091" hotspotY="0.509091" original-source="C:\Users\user\Downloads\Untitled (54).png">
+                        <collision-poly>
+                            <point x="0.0181818" y="0.0181818" />
+                            <point x="0.490909" y="0" />
+                            <point x="0.981818" y="0.0181818" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.981818" y="0.981818" />
+                            <point x="0.490909" y="1" />
+                            <point x="0.0181818" y="0.981818" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Untitled18" sid="169966746487008">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="629399441064572">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="770858862951890" speed="5">
+                    <frame duration="1" hotspotX="0.502392" hotspotY="0.508475" original-source="C:\Users\user\Downloads\Untitled (57).png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="VersionText" sid="793778856242573">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="913826680995089">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Rectangle" sid="658200873653108">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649890523220442" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\New folder\Rectangle 1.png">
+                        <collision-poly>
+                            <point x="0.0213675" y="0.0150602" />
+                            <point x="0.5" y="0" />
+                            <point x="0.978632" y="0.0150602" />
+                            <point x="1" y="0.5" />
+                            <point x="0.978632" y="0.98494" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0213675" y="0.98494" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Login.xml</layout>
+        <layout>NewLogIn.xml</layout>
+        <layout>Chat.xml</layout>
+        <layout>Loading.xml</layout>
+        <layout>Mobile.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Login events.xml</event-sheet>
+        <event-sheet>Chat events.xml</event-sheet>
+        <event-sheet>Loading.xml</event-sheet>
+        <event-sheet>Mobile.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Multiplayer" uid="8" />
+        <global-instance type="Keyboard" uid="9" />
+        <global-instance type="Function" uid="10" />
+        <global-instance type="Browser" uid="13" />
+        <global-instance type="Mouse" uid="0" />
+        <global-instance type="Cookie" uid="34">
+            <properties>
+                <my-property>77</my-property>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="basic-regular-webfont.woff" />
+        <file name="basic-regular-webfont.woff2" />
+        <file name="stylesheet.css" />
+    </files-folder>
+</c2project>

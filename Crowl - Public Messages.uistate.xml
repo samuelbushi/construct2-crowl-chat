@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Login</layout>
+        <layout order="1">Chat</layout>
+        <layout order="4">Loading</layout>
+        <layout active="1" order="6">NewLogIn</layout>
+        <event-sheet order="2">Chat events</event-sheet>
+        <event-sheet order="3">Login events</event-sheet>
+        <event-sheet order="5">Loading</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/LogIN/" />
+        <folder expanded="0" path="object-folder/Managers/" />
+        <folder expanded="0" path="object-folder/Loading/" />
+        <folder expanded="1" path="object-folder/NewLogIn/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/BG/" />
+        <folder expanded="1" path="animation-folder/Untitled7/" />
+        <folder expanded="1" path="animation-folder/Untitled6/" />
+        <folder expanded="1" path="animation-folder/Untitled5/" />
+        <folder expanded="1" path="animation-folder/Untitled4/" />
+        <folder expanded="1" path="animation-folder/Untitled/" />
+        <folder expanded="1" path="animation-folder/Untitled2/" />
+        <folder expanded="1" path="animation-folder/LoadingUrl/" />
+        <folder expanded="1" path="animation-folder/owl/" />
+        <folder expanded="1" path="animation-folder/Untitled8/" />
+        <folder expanded="1" path="animation-folder/Untitled3/" />
+        <folder expanded="1" path="animation-folder/Untitled9/" />
+        <folder expanded="1" path="animation-folder/Untitled11/" />
+        <folder expanded="1" path="animation-folder/Untitled10/" />
+        <folder expanded="1" path="animation-folder/Untitled12/" />
+        <folder expanded="1" path="animation-folder/Untitled13/" />
+        <folder expanded="1" path="animation-folder/Untitled14/" />
+        <folder expanded="1" path="animation-folder/Untitled15/" />
+        <folder expanded="1" path="animation-folder/Untitled17/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Untitled18/" />
+        <folder expanded="1" path="animation-folder/Rectangle/" />
+    </folders-expanded>
+</c2uistate>

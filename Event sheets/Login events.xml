@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Login events</name>
+    <events>
+        <variable comment="Name entered on login screen" constant="0" name="MyUsername" sid="2294275323197028" static="0" type="text"></variable>
+        <event-block disabled="1" sid="3863182249228078">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2705455514287463" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set focused" sid="975796704986928" type="NBame" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="9482238556812048">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8525359706670102" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="476068973969335" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Untitled5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="676397050192453">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="359246587959250" type="NBame">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="12" name="Supports multiplayer" sid="769828129483522" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set Cookie" sid="102502041686855" type="Cookie">
+                            <param id="0" name="name">&quot;UserName&quot;</param>
+                            <param id="1" name="value">MyUsername</param>
+                            <param id="2" name="days">30</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="741838032559010" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="101026145780668" type="System">
+                            <param id="0" name="Variable">MyUsername</param>
+                            <param id="1" name="Value">NBame.Text</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="262065886199477" type="System">
+                            <param id="0" name="Layout">Chat</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="465309684453026">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="799317994684617" type="NBame">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="12" name="Supports multiplayer" sid="742215646013482" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="923182141668056" type="Untitled2">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="575413197859329">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="688947511762037" type="Mouse">
+                    <param id="0" name="Object">Untitled5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="602393135442065" type="BG">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="194632890235038" type="Untitled5">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="880516174380961">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="467942741794799" type="Mouse">
+                    <param id="0" name="Object">Untitled5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="595043676660834" type="Untitled5">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="887027570666310">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="711420832549140" type="Mouse">
+                    <param id="0" name="Object">Untitled6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="428780665050360" type="BG">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="5" name="Set frame" sid="127029986797614" type="Untitled6">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="440694280635141">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="430032894143319" type="Mouse">
+                    <param id="0" name="Object">Untitled6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="332741855237726" type="Untitled6">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="403075118255841">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="773446384267204" type="Mouse">
+                    <param id="0" name="Object">Untitled7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="180903137389355" type="Untitled7">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="625620525098626" type="BG">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="315595233544571">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="870745557316209" type="Mouse">
+                    <param id="0" name="Object">Untitled7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="272203157755431" type="Untitled7">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="695653587020993">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="332372632989061" type="Mouse">
+                    <param id="0" name="Object">Untitled7</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="285179503174203" type="Mouse">
+                    <param id="0" name="Object">Untitled5</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="338984359335588" type="Mouse">
+                    <param id="0" name="Object">Untitled6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="710005769846793" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="811429703957752">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="473153319194153" type="Mouse">
+                    <param id="0" name="Object">Untitled7</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="295216481789539" type="Mouse">
+                    <param id="0" name="Object">Untitled5</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="324095906224839" type="Mouse">
+                    <param id="0" name="Object">Untitled6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="729270215920557" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="632766808411718" type="BG">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="480549285276484">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="761500662172853" type="Mouse">
+                    <param id="0" name="Object">Untitled7</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="788761863608820" type="Mouse">
+                    <param id="0" name="Object">Untitled5</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="143379250624611" type="Mouse">
+                    <param id="0" name="Object">Untitled6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="471024651241391" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="267454092192550">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="144451250353996" type="System" />
+            </conditions>
+            <actions>
+                <action id="8" name="Set CSS style" sid="466605092299865" type="NBame">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;basicregular&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="892228320468941" type="Text">
+                    <param id="0" name="Family name">&quot;basicregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="263464807243254" type="VersionText">
+                    <param id="0" name="Family name">&quot;basicregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="853748222793073" type="VersionText">
+                    <param id="0" name="Text">projectversion</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="322624617840177">
+            <conditions>
+                <condition id="0" inverted="1" name="Compare text" sid="725441733030541" type="NBame">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="973411371371225" type="Untitled2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="818653014543610">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="453554563522945" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="645880072944977" type="NBame">
+                    <param id="0" name="Text">Cookie.value</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="117733542336703">
+            <conditions>
+                <condition id="0" name="Compare text" sid="540263766936550" type="NBame">
+                    <param id="0" name="Text">&quot;0&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="148016566361027" type="NBame">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
