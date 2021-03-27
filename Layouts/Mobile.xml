@@ -15,7 +15,7 @@
     <layers>
         <layer name="Layer 0" sid="421190623716255">
             <initially-visible>1</initially-visible>
-            <background-color>8,8,8</background-color>
+            <background-color>255,255,255</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -42,8 +42,8 @@
                         <x>960</x>
                         <y>540</y>
                         <z>0</z>
-                        <width>608</width>
-                        <height>650</height>
+                        <width>639.549865723</width>
+                        <height>639.549865723</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
