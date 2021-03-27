@@ -10,13 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Login</layout>
+        <layout active="1" order="0">Login</layout>
         <layout order="1">Chat</layout>
         <layout order="4">Loading</layout>
-        <layout active="1" order="6">NewLogIn</layout>
         <event-sheet order="2">Chat events</event-sheet>
         <event-sheet order="3">Login events</event-sheet>
-        <event-sheet order="5">Loading</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,7 +28,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/LogIN/" />
         <folder expanded="0" path="object-folder/Managers/" />
         <folder expanded="0" path="object-folder/Loading/" />
-        <folder expanded="1" path="object-folder/NewLogIn/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -45,7 +42,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Untitled/" />
         <folder expanded="1" path="animation-folder/Untitled2/" />
         <folder expanded="1" path="animation-folder/LoadingUrl/" />
-        <folder expanded="1" path="animation-folder/owl/" />
         <folder expanded="1" path="animation-folder/Untitled8/" />
         <folder expanded="1" path="animation-folder/Untitled3/" />
         <folder expanded="1" path="animation-folder/Untitled9/" />

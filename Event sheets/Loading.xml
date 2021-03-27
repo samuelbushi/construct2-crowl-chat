@@ -12,7 +12,7 @@
                 </condition>
                 <condition id="3" name="Compare frame" sid="631506674429060" type="LoadingUrl">
                     <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">16</param>
+                    <param id="1" name="Number">28</param>
                 </condition>
             </conditions>
             <actions>
