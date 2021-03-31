@@ -1,3 +1,6 @@
+<img alt="Netlify Latest Build" src="https://img.shields.io/github/last-commit/samuelbushi/construct2-crowl-chat?style=plastic" />
+
+
 # Peer to peer chat & chat rooms
 Peer-to-peer chat rooms and groups. Source for construct 2 (engine).
 
