@@ -1,6 +1,8 @@
 <p>
 <img alt="Netlify Latest Build" src="https://img.shields.io/github/last-commit/samuelbushi/construct2-crowl-chat?style=plastic" />
 <img alt="Repository Size" src="https://img.shields.io/github/repo-size/samuelbushi/construct2-crowl-chat?label=Size%20&style=plastic" />
+<img alt="Repository Size" src="https://img.shields.io/badge/-Archived%20Project-red?style=plastic" />
+  
 </p>
 
 # Peer to peer chat & chat rooms
